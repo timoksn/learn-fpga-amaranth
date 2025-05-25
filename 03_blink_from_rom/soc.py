@@ -6,26 +6,26 @@ class SOC(Elaboratable):
 
     def __init__(self):
 
-        self.leds = Signal(5)
+        self.leds = Signal(5) #original 2
 
     def elaborate(self, platform):
 
         m = Module()
 
-        cw = Clockworks(m, slow=21)
+        cw = Clockworks(m, slow=22)
         m.submodules.cw = cw
 
-        sequence = [
-                0b00000,
+        sequence = [                
                 0b00001,
                 0b00010,
                 0b00100,
                 0b01000,
                 0b10000,
-                0b10001,
-                0b10010,
-                0b10100,
-                0b11000,
+                0b01000,
+                0b00100,
+                0b00010,
+                0b00001,
+                0b00000
         ]
 
         pc = Signal(5)

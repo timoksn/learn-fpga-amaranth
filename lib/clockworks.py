@@ -13,7 +13,7 @@ class Clockworks(wiring.Component):
     def __init__(self, module, slow=0, sim_slow=None):
 
         # Since amaranth 0.6 clock domains do not propagate upwards (RFC59)
-        module.domains += ClockDomain(clockworks_domain_name)
+        module.domains = ClockDomain(clockworks_domain_name)
 
         # Since the module provides a new clock domain, which is accessible
         # via the top level module, we don't need to explicitly provide the

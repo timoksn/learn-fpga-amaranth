@@ -10,7 +10,7 @@ class SOC(wiring.Component):
     # (default = 1).
     # Signals declared as In or Out are accessible via self.<name>
     # from inside the class.
-    leds: Out(5)
+    leds: Out(2) #orgingal 5
 
     def __init__(self):
         # Call the parent constructor

@@ -7,7 +7,7 @@ from clockworks import Clockworks
 
 class SOC(wiring.Component):
 
-    leds: Out(5)
+    leds: Out(2) #original 5
 
     def __init__(self):
         super().__init__()
